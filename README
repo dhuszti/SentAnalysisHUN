@@ -1,1 +1,10 @@
-First Commit
+Sentiment Analysis in Hungarian language
+
+Still in development phase...
+
+Tools, I used:
+-HunToken, HunMorph, HunPos (http://mokk.bme.hu/eszkozok/)
+-Python
+-NumPy
+-Sentiment dictionaries - translated into Hungarian
+-Sentiment Corpus - OpinHuBank (https://sites.google.com/site/mmihaltz/resources)
