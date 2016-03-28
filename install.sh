@@ -21,7 +21,7 @@ apt-get --assume-yesinstall default-jdk
 
 # Packages for HunPos
 apt-get --assume-yes install --reinstall libc6-i386
-dpkg-reconfigure dash
+dpkg-reconfigure dash -y
 
 
 
@@ -41,7 +41,7 @@ cd ocamorph
 make
 echo " " >> ~/.bashrc
 echo "# Ocamorph for HunMorph NLP tool" >> ~/.bashrc
-echo "PATH=/home/osboxes/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
+echo "PATH=${PATH}:/home/osboxes/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
 cd ..
 cd ..
 
