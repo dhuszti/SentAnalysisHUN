@@ -5,22 +5,22 @@
 
 # Basic packages to install
 apt-get update
-apt-get install build-essential
-apt-get install cvs
+apt-get --assume-yes install build-essential
+apt-get --assume-yes install cvs
 
 # Packages for HunMorph tool
-apt-get install ocaml
-apt-get install texinfo
-apt-get install ocaml-findlib
-apt-get install texlive
+apt-get --assume-yes install ocaml
+apt-get --assume-yes install texinfo
+apt-get --assume-yes install ocaml-findlib
+apt-get --assume-yes install texlive
 
 # Packages for SzegedNER
 apt-get update
-apt-get install default-jre
-apt-get install default-jdk
+apt-get --assume-yesinstall default-jre
+apt-get --assume-yesinstall default-jdk
 
 # Packages for HunPos
-apt-get install --reinstall libc6-i386
+apt-get --assume-yes install --reinstall libc6-i386
 dpkg-reconfigure dash
 
 
