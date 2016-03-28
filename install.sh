@@ -43,6 +43,7 @@ echo " " >> ~/.bashrc
 echo "# Ocamorph for HunMorph NLP tool" >> ~/.bashrc
 echo "PATH=${PATH}:/home/osboxes/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
 cd ..
+cd ..
 
 # Install Huntoken
 mkdir HunToken
