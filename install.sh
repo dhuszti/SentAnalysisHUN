@@ -41,14 +41,14 @@ cd ocamorph
 make
 echo " " >> ~/.bashrc
 echo "# Ocamorph for HunMorph NLP tool" >> ~/.bashrc
-echo "PATH=${PATH}:/home/osboxes/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
+echo "PATH=/home/osboxes/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
 cd ..
 cd ..
 
 # Install Huntoken
 mkdir HunToken
 cd HunToken
-wget https://www.dropbox.com/s/ay97uxk98oaihtj/huntoken-1.6.tar.gz?dl=0
+wget https://www.dropbox.com/s/ay97uxk98oaihtj/huntoken-1.6.tar.gz
 tar -xvzf huntoken-1.6.tar.gz
 rm huntoken-1.6.tar.gz
 cd huntoken-1.6
@@ -73,13 +73,14 @@ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google
 // if ágba hogy windows, osx, vagy linux
 tar -xvzf hunpos-1.0-linux.tgz
 rm hunpos-1.0-linux.tgz
+gzip -d hu_szeged_kr.model.gz
 cd ..
 
 # Install typoing for Hungarian language
 mkdir typo
 cd typo
-wget https://www.dropbox.com/s/l8d50ksjk1rqvva/ekezo.tar.gz?dl=0
-wget https://www.dropbox.com/s/ayglzjnx5aeqxh8/p2iso?dl=0
+wget https://www.dropbox.com/s/l8d50ksjk1rqvva/ekezo.tar.gz
+wget https://www.dropbox.com/s/ayglzjnx5aeqxh8/p2iso
 tar -xvzf ekezo.tar.gz
 rm ekezo.tar.gz
 cd ..
