@@ -87,7 +87,7 @@ gzip -d hu_szeged_kr.model.gz
 cd $HOME/NLPtools
 mkdir typo
 cd typo
-wget https://www.dropbox.com/s/l8d50ksjk1rqvva/ekezo.tar.gz
+wget https://www.dropbox.com/s/1md8b94t04fuo9l/ekezo.tar.gz
 wget https://www.dropbox.com/s/ayglzjnx5aeqxh8/p2iso
 tar -xvzf ekezo.tar.gz
 rm ekezo.tar.gz
