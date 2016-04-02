@@ -111,4 +111,6 @@ echo "ablakot" | ocamorph --aff $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.af
 # HunToken test
 echo  NLPtools/hunpos/hunpos-1.0-linux/
 # HunPos test
-if [(echo "ablakot" | $HOME/NLPtools/hunpos/hunpos-1.0-linux/hunpos-tag  $HOME/NLPtools/hunpos/hu_szeged_kr.model) == "ablakot NOUN<CAS<ACC>>"]; then  echo "HunPos test was successful" fi
+echo "ablakot" | $HOME/NLPtools/hunpos/hunpos-1.0-linux/hunpos-tag  $HOME/NLPtools/hunpos/hu_szeged_kr.model) == "ablakot NOUN<CAS<ACC>>"
+# Typoing test
+echo "teszteles" | $HOME/NLPtools/typo/ekezo/ekito.run | $HOME/NLPtools/typo/p2iso
