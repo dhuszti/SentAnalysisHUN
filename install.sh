@@ -21,16 +21,17 @@ apt-get --assume-yesinstall default-jdk
 
 # Packages for HunPos
 apt-get --assume-yes install --reinstall libc6-i386
-dpkg-reconfigure dash -y
+dpkg-reconfigure dash
 
 
 
 # Creating basic directory 
-cd home
+cd $HOME
 mkdir NLPtools
 cd NLPtools
 
 # Install Hunmorph
+cd $HOME
 mkdir HunMorph
 cd HunMorph
 cvs -d :pserver:anonymous:anonymous@cvs.mokk.bme.hu:/local/cvs co ocamorph
@@ -41,11 +42,11 @@ cd ocamorph
 make
 echo " " >> ~/.bashrc
 echo "# Ocamorph for HunMorph NLP tool" >> ~/.bashrc
-echo "PATH=${PATH}:/home/osboxes/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
-cd ..
-cd ..
+echo "PATH=${PATH}:$HOME/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
+
 
 # Install Huntoken
+cd $HOME/NLPtools
 mkdir HunToken
 cd HunToken
 wget https://www.dropbox.com/s/ay97uxk98oaihtj/huntoken-1.6.tar.gz
@@ -54,18 +55,18 @@ rm huntoken-1.6.tar.gz
 cd huntoken-1.6
 make
 make install
-cd ..
-cd ..
+
 
 # Install SzegedNER
+cd $HOME/NLPtools
 mkdir SzegedNER
 cd SzegedNER
 wget http://rgai.inf.u-szeged.hu/project/nlp/research/NER/ner.jar
-cd ..
 
 # To test it use: java -Xmx3G -jar ner.jar -mode predicate -input input.txt -output output.txt
 
 # Install HunPos
+cd $HOME/NLPtools
 mkdir hunpos
 cd hunpos
 wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/hunpos/hu_szeged_kr.model.gz
@@ -74,16 +75,19 @@ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google
 tar -xvzf hunpos-1.0-linux.tgz
 rm hunpos-1.0-linux.tgz
 gzip -d hu_szeged_kr.model.gz
-cd ..
 
 # Install typoing for Hungarian language
+cd $HOME/NLPtools
 mkdir typo
 cd typo
 wget https://www.dropbox.com/s/l8d50ksjk1rqvva/ekezo.tar.gz
 wget https://www.dropbox.com/s/ayglzjnx5aeqxh8/p2iso
 tar -xvzf ekezo.tar.gz
 rm ekezo.tar.gz
-cd ..
+
 
 # Download project files from GitHub
+cd $HOME/NLPtools
+mkdir SentimentAnalysis_src
 wget https://github.com/dhuszti/SentAnalysisHUN/archive/master.zip
+unzip master.zip
