@@ -88,6 +88,6 @@ rm ekezo.tar.gz
 
 # Download project files from GitHub
 cd $HOME/NLPtools
-mkdir SentimentAnalysis_src
 wget https://github.com/dhuszti/SentAnalysisHUN/archive/master.zip
 unzip master.zip
+rm master.zip
