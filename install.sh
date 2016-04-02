@@ -34,10 +34,16 @@ cd NLPtools
 cd $HOME/NLPtools
 mkdir HunMorph
 cd HunMorph
-cvs -d :pserver:anonymous:anonymous@cvs.mokk.bme.hu:/local/cvs co ocamorph
-wget ftp://ftp.mokk.bme.hu/Tool/Hunmorph/Resources/Morphdb.hu/morphdb-hu-20060525.tgz
-tar -xvzf morphdb-hu-20060525.tgz
-rm morphdb-hu-20060525.tgz
+#cvs -d :pserver:anonymous:anonymous@cvs.mokk.bme.hu:/local/cvs co ocamorph
+#wget ftp://ftp.mokk.bme.hu/Tool/Hunmorph/Resources/Morphdb.hu/morphdb-hu-20060525.tgz
+wget https://www.dropbox.com/s/92kn9ml5f8682ld/morphdb.hu.tar.gz
+wget https://www.dropbox.com/s/128zur1gz9s6vfi/ocamorph.tar.gz
+tar -xvzf morphdb.hu.tar.gz
+tar -xvzf ocamorph.tar.gz
+rm morphdb.hu.tar.gz
+rm ocamorph.tar.gz
+#tar -xvzf morphdb-hu-20060525.tgz
+#rm morphdb-hu-20060525.tgz
 cd ocamorph
 make
 echo " " >> ~/.bashrc
