@@ -31,7 +31,7 @@ mkdir NLPtools
 cd NLPtools
 
 # Install Hunmorph
-cd $HOME
+cd $HOME/NLPtools
 mkdir HunMorph
 cd HunMorph
 cvs -d :pserver:anonymous:anonymous@cvs.mokk.bme.hu:/local/cvs co ocamorph
