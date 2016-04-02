@@ -97,3 +97,7 @@ cd $HOME/NLPtools
 wget https://github.com/dhuszti/SentAnalysisHUN/archive/master.zip
 unzip master.zip
 rm master.zip
+
+# Set permissions to access files not only as root privilege user
+chmod -R +r $HOME/NLPtools
+
