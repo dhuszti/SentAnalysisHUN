@@ -77,7 +77,7 @@ mkdir hunpos
 cd hunpos
 wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/hunpos/hu_szeged_kr.model.gz
 wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/hunpos/hunpos-1.0-linux.tgz
-// if ágba hogy windows, osx, vagy linux
+# if ágba hogy windows, osx, vagy linux
 tar -xvzf hunpos-1.0-linux.tgz
 rm hunpos-1.0-linux.tgz
 gzip -d hu_szeged_kr.model.gz
