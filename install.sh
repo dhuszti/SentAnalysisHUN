@@ -1,7 +1,10 @@
 #!/bin/sh
-
 # You must run this shell script as a root privilege user with following command
 # sudo ./install.sh
+
+# -----------------------------------------------
+# ----- Linux packages to download --------------
+# -----------------------------------------------
 
 # Basic packages to install
 apt-get update
@@ -24,6 +27,9 @@ apt-get --assume-yes install --reinstall libc6-i386
 dpkg-reconfigure dash
 
 
+# -----------------------------------------------
+# ----- Downloading and installing tools --------
+# -----------------------------------------------
 
 # Creating basic directory 
 cd $HOME
@@ -102,6 +108,9 @@ rm master.zip
 # Set permissions to access files not only as root privilege user
 chmod -R +r $HOME/NLPtools
 
+# -----------------------------------------------
+# -------------- Test NLP tools  ----------------
+# -----------------------------------------------
 
 # Test NLP tools, whether there was any installation error
 cd $HOME/NLPtools
@@ -109,8 +118,10 @@ echo "Teszteljük a következő nyelvi eszközöket, Kiss Géza." >> test.txt
 # HunMorph test
 echo "ablakot" | ocamorph --aff $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.aff --dic $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.dic
 # HunToken test
-echo  NLPtools/hunpos/hunpos-1.0-linux/
+#echo  NLPtools/hunpos/hunpos-1.0-linux/
 # HunPos test
-echo "ablakot" | $HOME/NLPtools/hunpos/hunpos-1.0-linux/hunpos-tag  $HOME/NLPtools/hunpos/hu_szeged_kr.model) == "ablakot NOUN<CAS<ACC>>"
+echo "ablakot" | $HOME/NLPtools/hunpos/hunpos-1.0-linux/hunpos-tag  $HOME/NLPtools/hunpos/hu_szeged_kr.model
 # Typoing test
 echo "teszteles" | $HOME/NLPtools/typo/ekezo/ekito.run | $HOME/NLPtools/typo/p2iso
+rm test.txt
+rm test_ki.txt
