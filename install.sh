@@ -45,6 +45,7 @@ rm ocamorph.tar.gz
 #tar -xvzf morphdb-hu-20060525.tgz
 #rm morphdb-hu-20060525.tgz
 cd ocamorph
+make clean
 make
 echo " " >> ~/.bashrc
 echo "# Ocamorph for HunMorph NLP tool" >> ~/.bashrc
@@ -101,3 +102,13 @@ rm master.zip
 # Set permissions to access files not only as root privilege user
 chmod -R +r $HOME/NLPtools
 
+
+# Test NLP tools, whether there was any installation error
+cd $HOME/NLPtools
+echo "Teszteljük a következő nyelvi eszközöket, Kiss Géza." >> test.txt 
+# HunMorph test
+echo "ablakot" | ocamorph --aff $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.aff --dic $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.dic
+# HunToken test
+echo  NLPtools/hunpos/hunpos-1.0-linux/
+# HunPos test
+if [(echo "ablakot" | $HOME/NLPtools/hunpos/hunpos-1.0-linux/hunpos-tag  $HOME/NLPtools/hunpos/hu_szeged_kr.model) == "ablakot NOUN<CAS<ACC>>"]; then  echo "HunPos test was successful" fi
