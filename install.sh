@@ -118,10 +118,11 @@ echo "Teszteljük a következő nyelvi eszközöket, Kiss Géza." >> test.txt
 # HunMorph test
 echo "ablakot" | ocamorph --aff $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.aff --dic $HOME/NLPtools/HunMorph/morphdb.hu/morphdb_hu.dic
 # HunToken test
-#echo  NLPtools/hunpos/hunpos-1.0-linux/
+cat $HOME/test.txt | huntoken > $HOME/test_huntoken.xml
+cat test_huntoken.xml
 # HunPos test
 echo "ablakot" | $HOME/NLPtools/hunpos/hunpos-1.0-linux/hunpos-tag  $HOME/NLPtools/hunpos/hu_szeged_kr.model
 # Typoing test
 echo "teszteles" | $HOME/NLPtools/typo/ekezo/ekito.run | $HOME/NLPtools/typo/p2iso
 rm test.txt
-rm test_ki.txt
+rm test_huntoken.xml
