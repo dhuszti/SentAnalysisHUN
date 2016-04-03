@@ -53,6 +53,7 @@ rm ocamorph.tar.gz
 cd ocamorph
 make clean
 make
+make install
 echo " " >> ~/.bashrc
 echo "# Ocamorph for HunMorph NLP tool" >> ~/.bashrc
 echo "PATH=${PATH}:$HOME/NLPtools/HunMorph/ocamorph/adm" >> ~/.bashrc
