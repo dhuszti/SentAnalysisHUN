@@ -95,9 +95,11 @@ cd $HOME/NLPtools
 mkdir typo
 cd typo
 wget https://www.dropbox.com/s/1md8b94t04fuo9l/ekezo.tar.gz
-wget https://www.dropbox.com/s/ayglzjnx5aeqxh8/p2iso
+wget https://www.dropbox.com/s/zaqodnisnx31uxm/p2iso.tar.gz
 tar -xvzf ekezo.tar.gz
+tar -xvzf p2iso.tar.gz
 rm ekezo.tar.gz
+rm p2iso.tar.gz
 
 
 # Download project files from GitHub
