@@ -48,7 +48,7 @@ then
 	# Packages for HunPos
 	apt-get --assume-yes install --reinstall libc6-i386
 	apt-get --assume-yes install ia32-libs
-	dpkg-reconfigure dash
+	#dpkg-reconfigure dash
 
 elif [[ "$OSdistribution" == 'Debian' ]]
 then
