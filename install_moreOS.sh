@@ -30,11 +30,16 @@ then
 	# Python setuptools package for NLTK usage
 	yum -y install python-setuptools
 	yum -y easy_install pip
-	yum -y pip install -U nltk
+	pip install -U nltk
 	
 	# Python numpy package
 	yum -y install python-numpy
-	yum -y pip install -U numpy
+	pip install -U numpy
+	
+	# Python SciKit-Learn for Machine Learning
+	yum -y install python-scipy
+	pip install -U scikit-learn
+	
 
 elif [[ "$OSdistribution" == 'Ubuntu' ]]
 then
@@ -62,11 +67,15 @@ then
 	# Python setuptools package for NLTK usage
 	apt-get --assume-yes install python-setuptools
 	apt-get --assume-yes easy_install pip
-	apt-get --assume-yes pip install -U nltk
+	pip install -U nltk
 	
 	# Python numpy package
 	apt-get --assume-yes install python-numpy
-	apt-get --assume-yes pip install -U numpy
+	pip install -U numpy
+	
+	# Python SciKit-Learn for Machine Learning
+	apt-get --assume-yes install python-scipy
+	pip install -U scikit-learn
 
 elif [[ "$OSdistribution" == 'Debian' ]]
 then
@@ -97,6 +106,10 @@ then
 	# Python numpy package
 	apt-get --assume-yes install python-numpy
 	apt-get --assume-yes pip install -U numpy
+	
+	# Python SciKit-Learn for Machine Learning
+	apt-get --assume-yes install python-scipy
+	pip install -U scikit-learn
 
 elif [[ "$OSdistribution" == 'RedHat' ]]
 then
@@ -121,6 +134,10 @@ then
 	# Python numpy package
 	yum -y install python-numpy
 	yum -y pip install -U numpy
+	
+	# Python SciKit-Learn for Machine Learning
+	yum -y install python-scipy
+	pip install -U scikit-learn
 
 elif [[ "$OSdistribution" == 'NovellSUSE' ]]
 then
