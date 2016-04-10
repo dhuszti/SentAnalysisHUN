@@ -31,6 +31,10 @@ then
 	yum -y install python-setuptools
 	yum -y easy_install pip
 	yum -y pip install -U nltk
+	
+	# Python numpy package
+	yum -y install python-numpy
+	yum -y pip install -U numpy
 
 elif [[ "$OSdistribution" == 'Ubuntu' ]]
 then
@@ -59,6 +63,10 @@ then
 	apt-get --assume-yes install python-setuptools
 	apt-get --assume-yes easy_install pip
 	apt-get --assume-yes pip install -U nltk
+	
+	# Python numpy package
+	apt-get --assume-yes install python-numpy
+	apt-get --assume-yes pip install -U numpy
 
 elif [[ "$OSdistribution" == 'Debian' ]]
 then
@@ -85,6 +93,10 @@ then
 	apt-get --assume-yes install python-setuptools
 	apt-get --assume-yes easy_install pip
 	apt-get --assume-yes pip install -U nltk
+	
+	# Python numpy package
+	apt-get --assume-yes install python-numpy
+	apt-get --assume-yes pip install -U numpy
 
 elif [[ "$OSdistribution" == 'RedHat' ]]
 then
@@ -105,6 +117,10 @@ then
 	yum -y install python-setuptools
 	yum -y easy_install pip
 	yum -y pip install -U nltk
+	
+	# Python numpy package
+	yum -y install python-numpy
+	yum -y pip install -U numpy
 
 elif [[ "$OSdistribution" == 'NovellSUSE' ]]
 then
