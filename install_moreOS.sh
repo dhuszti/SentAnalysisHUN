@@ -26,6 +26,9 @@ then
 
 	# Packages for HunPos
 	yum -y install glibc.i686
+	
+	# Python setuptools package for NLTK usage
+	yum -y install python-setuptools
 
 elif [[ "$OSdistribution" == 'Ubuntu' ]]
 then
@@ -49,6 +52,9 @@ then
 	apt-get --assume-yes install --reinstall libc6-i386
 	apt-get --assume-yes install ia32-libs
 	#dpkg-reconfigure dash
+	
+	# Python setuptools package for NLTK usage
+	apt-get --assume-yes install python-setuptools
 
 elif [[ "$OSdistribution" == 'Debian' ]]
 then
@@ -70,6 +76,9 @@ then
 
 	# Packages for HunPos
 	apt-get --assume-yes install ia32-libs
+	
+	# Python setuptools package for NLTK usage
+	apt-get --assume-yes install python-setuptools
 
 elif [[ "$OSdistribution" == 'RedHat' ]]
 then
@@ -85,6 +94,9 @@ then
 
 	# Packages for HunPos
 	yum -y install glibc.i686
+	
+	# Python setuptools package for NLTK usage
+	yum -y install python-setuptools
 
 elif [[ "$OSdistribution" == 'NovellSUSE' ]]
 then
