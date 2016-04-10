@@ -29,6 +29,7 @@ then
 	
 	# Python setuptools package for NLTK usage
 	yum -y install python-setuptools
+	yum -y easy_install pip
 
 elif [[ "$OSdistribution" == 'Ubuntu' ]]
 then
@@ -55,6 +56,7 @@ then
 	
 	# Python setuptools package for NLTK usage
 	apt-get --assume-yes install python-setuptools
+	apt-get --assume-yes easy_install pip
 
 elif [[ "$OSdistribution" == 'Debian' ]]
 then
@@ -79,6 +81,7 @@ then
 	
 	# Python setuptools package for NLTK usage
 	apt-get --assume-yes install python-setuptools
+	apt-get --assume-yes easy_install pip
 
 elif [[ "$OSdistribution" == 'RedHat' ]]
 then
@@ -97,6 +100,7 @@ then
 	
 	# Python setuptools package for NLTK usage
 	yum -y install python-setuptools
+	yum -y easy_install pip
 
 elif [[ "$OSdistribution" == 'NovellSUSE' ]]
 then
